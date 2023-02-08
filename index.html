@@ -7,8 +7,16 @@
      
     </head>
     <body>
-        <div id="header">Etch-A-Sketch</div>
+        <h1>Etch-A-Sketch</h1>
+
+        <div class="slideContainer">
+            <input type="range" min="2" max="100" value="16" class="slider" id="myRange">
+            Grid Size: <span id="size"></span>
+        </div>
+        
         <div id="container"></div>
+
+        <button id="reset">Reset</button>
 
         <script src ="script.js"></script>
     </body>
