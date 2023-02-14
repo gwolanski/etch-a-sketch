@@ -11,12 +11,18 @@
 
         <div class="slideContainer">
             <input type="range" min="2" max="100" value="16" class="slider" id="myRange" onchange="reloadGrid(this.value)">
-            Grid Size: <span id="size"></span>
+            <span id="size"></span>
         </div>
         
         <div id="gridContainer"></div>
 
-        <button id="reset">Reset</button>
+        <div id="buttons">
+            <button id="blackbtn" onclick="setColor('black')">Black</button>
+            <button id="rainbowbtn" onclick="setColor('rainbow')">Rainbow</button>
+            <button id="resetbtn">Reset</button>
+        </div>
+
+        <div id="drawingStatus"></div>
 
         <script src ="script.js"></script>
     </body>
