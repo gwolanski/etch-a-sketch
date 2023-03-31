@@ -49,8 +49,10 @@ function colorDiv() {
     if (coloringEnabled) {
         if (color == 'rainbow') {
             this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`
-        } else {
+        } else if (color == 'black') {
             this.style.backgroundColor = "black";
+        } else {
+            this.style.backgroundColor = colorSelector.value;
         }
     } 
 }
@@ -60,12 +62,9 @@ function setColor(colorChoice) {
 }
 
 function toggleDrawing() {
-    
-
     if (coloringEnabled) {
         coloringEnabled = false;
         drawingStatus.innerHTML = "Drawing: Off";
-
     } else {
         coloringEnabled = true;
         drawingStatus.innerHTML = "Drawing: On";
@@ -85,7 +84,11 @@ blackButton.addEventListener('click', e => {
     color = "black";
 });
 
+let colorSelector = document.getElementById("color-selector")
+console.log(colorSelector.value);
+colorSelector.addEventListener("change", e => {
+    color = colorSelector.value;
+})
+
 
 createGrid(16);
-
-//create a function that stops/starts drawing when user clicks on one of the divs

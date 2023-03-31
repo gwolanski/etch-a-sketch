@@ -32,11 +32,6 @@ h1 {
     border: 1px solid rgba(0, 0, 0, 0.135);
 }
 
-.hover {
-    border: 1px solid black;
-    background-color: blue;
-}
-
 .slideContainer {
     display: flex;
     width: 500px;
@@ -84,10 +79,16 @@ h1 {
     font-size: 15px;
 }
 
-#buttons {
+#color-selection {
     display: flex;
     width: 500px;
-    justify-content: space-between;
+    justify-content: space-around;
+}
+
+label {
+    font-family: 'american typewriter', palatino, papyrus;
+    font-size: 20px;
+    margin-right: 5px;
 }
 
 #resetbtn {
@@ -99,6 +100,11 @@ h1 {
     padding-left: 10px;
     padding-right: 10px;
     border: 2px black solid;
+    margin-top: 15px;
+}
+
+#resetbtn:hover {
+    border: 3px rgb(2, 111, 151) solid;
 }
 
 #blackbtn {
@@ -111,6 +117,10 @@ h1 {
     padding-left: 10px;
     padding-right: 10px;
     border: 2px black solid;
+}
+
+#blackbtn:hover {
+    border: 3px rgb(2, 111, 151) solid;
 }
 
 #rainbowbtn {
@@ -137,9 +147,38 @@ h1 {
     border: 2px black solid;
 }
 
+#rainbowbtn:hover {
+    border: 3px rgb(2, 111, 151) solid; 
+}
+
+#color-selector {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    padding: 0;
+    border: none;
+}
+
+#color-selector-container {
+    display: flex;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#color-selector-container:hover {
+    border: 3px rgb(2, 111, 151) solid; 
+}
+
 #drawingStatus {
     margin: 25px;
     color:black;
-    font-size: 20px;
+    font-size: 15px;
     font-family: 'american typewriter', palatino, papyrus;
 }
